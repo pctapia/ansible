@@ -1,0 +1,7 @@
+ansible_user: ubuntu
+# Optional: only if you don’t want to rely on ssh_args in ansible.cfg
+# ansible_ssh_common_args: "-o StrictHostKeyChecking=accept-new"
+
+# Optional: if you want sudo by default for this group
+ansible_become: true
+ansible_become_method: sudo

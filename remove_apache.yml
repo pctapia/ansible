@@ -1,0 +1,25 @@
+---
+
+- hosts: all
+  become: yes
+  tasks:
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install apache2 package
+      apt:
+        name: apache2
+        state: absent
+
+    - name: Install php support for apache
+      apt:
+        name: libapache2-mod-php
+        state: absent
+
+    # - name: Ensure Apache is running
+    #   service:
+    #     name: apache2
+    #     state: started
+    #     enabled: yes
